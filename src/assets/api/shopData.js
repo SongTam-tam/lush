@@ -3769,7 +3769,7 @@ export default [
         itemtotal: 130000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/dirty100ml1.jpg",
-        img: "./images/perfume/dirty100ml2.jpg",
+        img2: "./images/perfume/dirty100ml2.jpg",
         cord: "2204495120",
         incense: "프레쉬 플로럴 우디",
         desc: "민트와 허브가 어우러진 상쾌함! 기분 좋은 청량함이 가득한 스피어민트, 타임 허브와 타라곤의 만남은 당신에게 잊혀지지 않는 순간을 선물해줄 거예요"
@@ -3784,7 +3784,7 @@ export default [
         itemtotal: 80000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/karma30ml1.jpg",
-        img: "./images/perfume/karma30ml2.jpg",
+        img2: "./images/perfume/karma30ml2.jpg",
         cord: "2204495121",
         incense: "시트러스 우디 스파이시",
         desc: "매혹적인 파촐리, 상큼하고 달콤한 오렌지 향, 그리고 상쾌한 소나무 오일의 멜로디는 당신에게 독특하고 매력적인 향기를 선물합니다"
@@ -3799,7 +3799,7 @@ export default [
         itemtotal: 70000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/dirty30ml1.jpg",
-        img: "./images/perfume/dirty30ml2.jpg",
+        img2: "./images/perfume/dirty30ml2.jpg",
         cord: "2204495118",
         incense: "프레쉬 플로럴 우디",
         desc: "민트와 허브가 어우러진 상쾌함! 기분 좋은 청량함이 가득한 스피어민트, 타임 허브와 타라곤의 만남은 당신에게 잊혀지지 않는 순간을 선물해줄 거예요"
@@ -3814,7 +3814,7 @@ export default [
         itemtotal: 300000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/hairdressersHusband100ml1.jpg",
-        img: "./images/perfume/hairdressersHusband100ml2.jpg",
+        img2: "./images/perfume/hairdressersHusband100ml2.jpg",
         cord: "2308861892",
         incense: "통카 자몽 오렌지",
         desc: "상큼한 오렌지와 자몽 그리고 은은한 통카가 당신의 삶에 가장 사랑스러운 날들의 향기를 남깁니다"
@@ -3829,7 +3829,7 @@ export default [
         itemtotal: 150000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/alina100ml1.jpg",
-        img: "./images/perfume/alina100ml2.jpg",
+        img2: "./images/perfume/alina100ml2.jpg",
         cord: "2404760356",
         incense: "다바나꽃 오렌지",
         desc: "여러 세대의 사람들이 함께 살아가는 우리의 삶처럼 뚜렷한 개성을 지닌 향기들을 담은 향수를 즐겨보세요"
@@ -3844,7 +3844,7 @@ export default [
         itemtotal: 130000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/sun100ml1.jpg",
-        img: "./images/perfume/sun100ml2.jpg",
+        img2: "./images/perfume/sun100ml2.jpg",
         cord: "2305787873",
         incense: "샌들우드 오렌지",
         desc: "오렌지 그리고 샌달우드는 이 상쾌한 향기를 빛나게 합니다. 이 향기는 여행지에서 느낀 감정에서 영감을 받아 만들어 졌습니다."
@@ -3859,7 +3859,7 @@ export default [
         itemtotal: 130000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/americanCream100ml1.jpg",
-        img: "./images/perfume/americanCream100ml2.jpg",
+        img2: "./images/perfume/americanCream100ml2.jpg",
         cord: "2305787885",
         incense: "바닐라 라벤더",
         desc: "라벤더 오일은 기분 좋은 편안함을 선물해줍니다."
@@ -3874,7 +3874,7 @@ export default [
         itemtotal: 130000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/chelseaMorning100ml1.jpg",
-        img: "./images/perfume/chelseaMorning100ml2.jpg",
+        img2: "./images/perfume/chelseaMorning100ml2.jpg",
         cord: "2410659315",
         incense: "바닐라 통카",
         desc: "첫 만남부터 당신의 감각에 끈적하게 달라붙을 향기랍니다"
@@ -3889,7 +3889,7 @@ export default [
         itemtotal: 130000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/freshAs100ml1.jpg",
-        img: "./images/perfume/freshAs100ml2.jpg",
+        img2: "./images/perfume/freshAs100ml2.jpg",
         cord: "2406334776",
         incense: "오리스 벤조인",
         desc: "자연의 생기 넘치는 향기가 마음의 평화를 경험하게 도와드립니다"
@@ -3904,7 +3904,7 @@ export default [
         itemtotal: 150000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/lust100ml1.jpg",
-        img: "./images/perfume/lust100ml2.jpg",
+        img2: "./images/perfume/lust100ml2.jpg",
         cord: "2204495190",
         incense: "바닐라 자스민 일랑일랑오일 장미",
         desc: "당동한 자스민 향기가 당신의 피부에 닿는 순간, 꿈꿔왔던 모든 것이 이뤄집니다"
@@ -3919,7 +3919,7 @@ export default [
         itemtotal: 130000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/vanillary100ml1.jpg",
-        img: "./images/perfume/vanillary100ml2.jpg",
+        img2: "./images/perfume/vanillary100ml2.jpg",
         cord: "2305787880",
         incense: "바닐라 통카 자스민",
         desc: "달콤한 바닐라, 통가와 자스민이 지친 당신을 포근히 안아드릴게요"
@@ -3934,7 +3934,7 @@ export default [
         itemtotal: 150000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/VeganLeatherJacket100ml1.jpg",
-        img: "./images/perfume/VeganLeatherJacket100ml2.jpg",
+        img2: "./images/perfume/VeganLeatherJacket100ml2.jpg",
         cord: "2411687842",
         incense: "클로브 통카",
         desc: "러쉬의 창립자, 마크는 베지테리언 브랜드로서 가준 대신 비건 레더 재킷에 어울리는퍼퓸을 만들고 싶었다고 해요"
@@ -3949,7 +3949,7 @@ export default [
         itemtotal: 200000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/furze100ml1.jpg",
-        img: "./images/perfume/furze100ml2.jpg",
+        img2: "./images/perfume/furze100ml2.jpg",
         cord: "2308861888",
         incense: "글리세린",
         desc: "금빛의 미모사는 꿈꿔왔던 행복을 선물하고, 당신을 더욱 빛나게 해드릴 거예요"
@@ -3964,7 +3964,7 @@ export default [
         itemtotal: 130000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/pansy100ml1.jpg",
-        img: "./images/perfume/pansy100ml2.jpg",
+        img2: "./images/perfume/pansy100ml2.jpg",
         cord: "2204495487",
         incense: "플로럴 시트러스 스위트",
         desc: "은은하게 퍼지는 깊고 부드러운 잔향! 당신의 매력을 돋보이게 하는 향기로 잊을 수 없는 순간들을 선물합니다"
@@ -3979,7 +3979,7 @@ export default [
         itemtotal: 150000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/karma100ml1.jpg",
-        img: "./images/perfume/karma100ml2.jpg",
+        img2: "./images/perfume/karma100ml2.jpg",
         cord: "2204495183",
         incense: "시트러스 우디 스파이시",
         desc: "매혹적인 파촐리, 상큼하고 달콤한 오렌지 향, 그리고 상쾌한 소나무 오일의 멜로디는 당신에게 독특하고 매력적인 향기를 선물합니다"
@@ -3994,7 +3994,7 @@ export default [
         itemtotal: 130000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/noWayToSayGoodbye100ml1.jpg",
-        img: "./images/perfume/noWayToSayGoodbye100ml2.jpg",
+        img2: "./images/perfume/noWayToSayGoodbye100ml2.jpg",
         cord: "2410659441",
         incense: "리씨열매오일 벤조인 장미",
         desc: "이 퍼퓸의 독특한 이름은 러쉬의 창립자, 마크의 작품이랍니다 그는 이 향을 처음 맡는 순간, 이제는 더 이상 세상에 없는 오래된 동료가 떠올라 이런 이름을 지어주었다고 하네요"
@@ -4009,7 +4009,7 @@ export default [
         itemtotal: 200000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/ginger100ml1.jpg",
-        img: "./images/perfume/ginger100ml2.jpg",
+        img2: "./images/perfume/ginger100ml2.jpg",
         cord: "2308862000",
 
         incense: "생강 샌들우드 베르가못 오렌지",
@@ -4025,7 +4025,7 @@ export default [
         itemtotal: 130000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/roseJam100ml1.jpg",
-        img: "./images/perfume/roseJam100ml2.jpg",
+        img2: "./images/perfume/roseJam100ml2.jpg",
         cord: "2204495496",
         incense: "장미 레몬"
     },
@@ -4039,7 +4039,7 @@ export default [
         itemtotal: 70000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/vanillary30ml1.jpg",
-        img: "./images/perfume/vanillary30ml2.jpg",
+        img2: "./images/perfume/vanillary30ml2.jpg",
         cord: "2204495195",
         incense: "바닐라 통카 자스민"
     },
@@ -4053,7 +4053,7 @@ export default [
         itemtotal: 70000,
         category: "향수", category2: "perfume",
         img: "./images/perfume/chelseaMorning30ml1.jpg",
-        img: "./images/perfume/chelseaMorning30ml2.jpg",
+        img2: "./images/perfume/chelseaMorning30ml2.jpg",
         cord: "2410659348",
         incense: "바닐라 통카"
     },
@@ -4067,7 +4067,7 @@ export default [
         itemtotal: 70000,
         category: "바디스프레이", category2: "perfume",
         img: "./images/body_spray/sexBomb200ml1.jpg",
-        img: "./images/body_spray/sexBomb200ml2.jpg",
+        img2: "./images/body_spray/sexBomb200ml2.jpg",
         cord: "2204495646",
         incense: "자스민 일랑일랑"
     },
@@ -4081,7 +4081,7 @@ export default [
         itemtotal: 70000,
         category: "바디스프레이", category2: "perfume",
         img: "./images/body_spray/stickyDates200ml1.jpg",
-        img: "./images/body_spray/stickyDates200ml2.jpg",
+        img2: "./images/body_spray/stickyDates200ml2.jpg",
         cord: "2504466229",
         incense: "샌들우드"
     },
@@ -4095,7 +4095,7 @@ export default [
         itemtotal: 70000,
         category: "바디스프레이", category2: "perfume",
         img: "./images/body_spray/dadsGardenLemonTree200ml1.jpg",
-        img: "./images/body_spray/dadsGardenLemonTree200ml2.jpg",
+        img2: "./images/body_spray/dadsGardenLemonTree200ml2.jpg",
         cord: "2204495583",
         incense: "라임 베르가못 레몬"
     },
@@ -4109,7 +4109,7 @@ export default [
         itemtotal: 80000,
         category: "바디스프레이", category2: "perfume",
         img: "./images/body_spray/guardianOfTheForest200ml1.jpg",
-        img: "./images/body_spray/guardianOfTheForest200ml2.jpg",
+        img2: "./images/body_spray/guardianOfTheForest200ml2.jpg",
         cord: "2204495651",
         incense: "사이프러스 라임"
     },
@@ -4123,7 +4123,7 @@ export default [
         itemtotal: 70000,
         category: "바디스프레이", category2: "perfume",
         img: "./images/body_spray/letTheGoodTimesRoll200ml1.jpg",
-        img: "./images/body_spray/letTheGoodTimesRoll200ml2.jpg",
+        img2: "./images/body_spray/letTheGoodTimesRoll200ml2.jpg",
         cord: "2204495641",
         incense: "글리세린"
     },
@@ -4137,7 +4137,7 @@ export default [
         itemtotal: 80000,
         category: "바디스프레이", category2: "perfume",
         img: "./images/body_spray/roseJam200ml1.jpg",
-        img: "./images/body_spray/roseJam200ml2.jpg",
+        img2: "./images/body_spray/roseJam200ml2.jpg",
         cord: "2204495601",
         incense: "제라늄 장미 레몬"
     },
@@ -4151,7 +4151,7 @@ export default [
         itemtotal: 70000,
         category: "바디스프레이", category2: "perfume",
         img: "./images/body_spray/sleepy200ml1.jpg",
-        img: "./images/body_spray/sleepy200ml2.jpg",
+        img2: "./images/body_spray/sleepy200ml2.jpg",
         cord: "2204495603",
         incense: "통카 라벤더 일랑일랑오일"
     },
@@ -4165,7 +4165,7 @@ export default [
         itemtotal: 70000,
         category: "바디스프레이", category2: "perfume",
         img: "./images/body_spray/avocadoCowash200ml1.jpg",
-        img: "./images/body_spray/avocadoCowash200ml2.jpg",
+        img2: "./images/body_spray/avocadoCowash200ml2.jpg",
         cord: "2204495631",
         incense: "올리바넘 베르가못"
     },
@@ -4179,7 +4179,7 @@ export default [
         itemtotal: 80000,
         category: "바디스프레이", category2: "perfume",
         img: "./images/body_spray/mrWallet200ml1.jpg",
-        img: "./images/body_spray/mrWallet200ml2.jpg",
+        img2: "./images/body_spray/mrWallet200ml2.jpg",
         cord: "2411688474",
         incense: "샌들우드 바닐라"
     },
@@ -4193,7 +4193,7 @@ export default [
         itemtotal: 80000,
         category: "바디스프레이", category2: "perfume",
         img: "./images/body_spray/sakura200ml1.jpg",
-        img: "./images/body_spray/sakura200ml2.jpg",
+        img2: "./images/body_spray/sakura200ml2.jpg",
         cord: "2204495668",
         incense: "네롤리 자스민 레몬"
     },
@@ -4207,7 +4207,7 @@ export default [
         itemtotal: 80000,
         category: "바디스프레이", category2: "perfume",
         img: "./images/body_spray/big200ml1.jpg",
-        img: "./images/body_spray/big200ml2.jpg",
+        img2: "./images/body_spray/big200ml2.jpg",
         cord: "2204495745",
         incense: "바닐라 네롤리"
     },
@@ -4221,7 +4221,7 @@ export default [
         itemtotal: 70000,
         category: "바디스프레이", category2: "perfume",
         img: "./images/body_spray/honeyIWashedTheKids200ml1.jpg",
-        img: "./images/body_spray/honeyIWashedTheKids200ml2.jpg",
+        img2: "./images/body_spray/honeyIWashedTheKids200ml2.jpg",
         cord: "2308861862",
         incense: "베르가못 오렌지"
     },
@@ -4235,7 +4235,7 @@ export default [
         itemtotal: 80000,
         category: "바디스프레이", category2: "perfume",
         img: "./images/body_spray/salty200ml1.jpg",
-        img: "./images/body_spray/salty200ml2.jpg",
+        img2: "./images/body_spray/salty200ml2.jpg",
         cord: "2204495672",
         incense: "샌들우드 장미"
     },
@@ -4249,7 +4249,7 @@ export default [
         itemtotal: 80000,
         category: "바디스프레이", category2: "perfume",
         img: "./images/body_spray/plumRain200ml1.jpg",
-        img: "./images/body_spray/plumRain200ml2.jpg",
+        img2: "./images/body_spray/plumRain200ml2.jpg",
         cord: "2204495662",
         incense: "오스만투스 네롤리 오렌지"
     },
@@ -4263,7 +4263,7 @@ export default [
         itemtotal: 70000,
         category: "바디스프레이", category2: "perfume",
         img: "./images/body_spray/theComforter200ml1.jpg",
-        img: "./images/body_spray/theComforter200ml2.jpg",
+        img2: "./images/body_spray/theComforter200ml2.jpg",
         cord: "2204495649",
         incense: "블랜커런트 사이프러스",
         desc: "달콤한 향기에 군침이 쏙"
@@ -4278,7 +4278,7 @@ export default [
         itemtotal: 70000,
         category: "바디스프레이", category2: "perfume",
         img: "./images/body_spray/dirtybodySpray200ml1.jpg",
-        img: "./images/body_spray/dirtybodySpray200ml2.jpg",
+        img2: "./images/body_spray/dirtybodySpray200ml2.jpg",
         cord: "2204495597",
         incense: "스피어민트 샌달우드 라벤더"
     },
@@ -4292,7 +4292,7 @@ export default [
         itemtotal: 30000,
         category: "고체향수", category2: "perfume",
         img: "./images/solid_perfume/dirty11g1.jpg",
-        img: "./images/solid_perfume/dirty11g2.jpg",
+        img2: "./images/solid_perfume/dirty11g2.jpg",
         cord: "2411004431",
         incense: "스피어민트 샌달우드 네롤리"
     },
@@ -4306,7 +4306,7 @@ export default [
         itemtotal: 30000,
         category: "고체향수", category2: "perfume",
         img: "./images/solid_perfume/americanCream11g1.jpg",
-        img: "./images/solid_perfume/americanCream11g2.jpg",
+        img2: "./images/solid_perfume/americanCream11g2.jpg",
         cord: "2204495552",
         incense: "바닐라 라벤더"
     },
@@ -4320,7 +4320,7 @@ export default [
         itemtotal: 30000,
         category: "고체향수", category2: "perfume",
         img: "./images/solid_perfume/freshAs11g1.jpg",
-        img: "./images/solid_perfume/freshAs11g2.jpg",
+        img2: "./images/solid_perfume/freshAs11g2.jpg",
         cord: "2412452441",
         incense: "오리스 벤조인"
     },
@@ -4334,7 +4334,7 @@ export default [
         itemtotal: 30000,
         category: "고체향수", category2: "perfume",
         img: "./images/solid_perfume/noWayToSayGoodbye11g1.jpg",
-        img: "./images/solid_perfume/noWayToSayGoodbye11g2.jpg",
+        img2: "./images/solid_perfume/noWayToSayGoodbye11g2.jpg",
         cord: "2412452495",
         incense: "블랙커런트 리씨열매오일 벤조인 장미"
     },
@@ -4348,7 +4348,7 @@ export default [
         itemtotal: 30000,
         category: "고체향수", category2: "perfume",
         img: "./images/solid_perfume/chelseaMorning11g1.jpg",
-        img: "./images/solid_perfume/chelseaMorning11g2.jpg",
+        img2: "./images/solid_perfume/chelseaMorning11g2.jpg",
         cord: "2412452519",
         incense: "통카 파자마오일 바닐라 호호바오일"
     },
@@ -4362,7 +4362,7 @@ export default [
         itemtotal: 30000,
         category: "고체향수", category2: "perfume",
         img: "./images/solid_perfume/alina11g1.jpg",
-        img: "./images/solid_perfume/alina11g2.jpg",
+        img2: "./images/solid_perfume/alina11g2.jpg",
         cord: "2404760385",
         incense: "클로브 파촐리 바닐라 베르가못"
     },
@@ -4376,7 +4376,7 @@ export default [
         itemtotal: 30000,
         category: "고체향수", category2: "perfume",
         img: "./images/solid_perfume/lordOfMisrule11g1.jpg",
-        img: "./images/solid_perfume/lordOfMisrule11g2.jpg",
+        img2: "./images/solid_perfume/lordOfMisrule11g2.jpg",
         cord: "2204495555",
         incense: "후추열매오일 파촐리 바닐라",
         desc: "알싸한 블랙 페퍼와 파촐리의 매력적인 향기"
@@ -4391,7 +4391,7 @@ export default [
         itemtotal: 30000,
         category: "고체향수", category2: "perfume",
         img: "./images/solid_perfume/roseJam11g1.jpg",
-        img: "./images/solid_perfume/roseJam11g2.jpg",
+        img2: "./images/solid_perfume/roseJam11g2.jpg",
         cord: "2411004714",
         incense: "장미 레몬"
     },
@@ -4405,7 +4405,7 @@ export default [
         itemtotal: 30000,
         category: "고체향수", category2: "perfume",
         img: "./images/solid_perfume/pansy11g1.jpg",
-        img: "./images/solid_perfume/pansy11g2.jpg",
+        img2: "./images/solid_perfume/pansy11g2.jpg",
         cord: "2411004651",
         incense: "로즈마리 갈바넘수지오일 베르가못"
     },
@@ -4419,7 +4419,7 @@ export default [
         itemtotal: 30000,
         category: "고체향수", category2: "perfume",
         img: "./images/solid_perfume/shade11g1.jpg",
-        img: "./images/solid_perfume/shade11g2.jpg",
+        img2: "./images/solid_perfume/shade11g2.jpg",
         cord: "2204495571",
         incense: "피마자오일 호호바오일"
     },
@@ -4433,7 +4433,7 @@ export default [
         itemtotal: 30000,
         category: "고체향수", category2: "perfume",
         img: "./images/solid_perfume/karma11g1.jpg",
-        img: "./images/solid_perfume/karma11g2.jpg",
+        img2: "./images/solid_perfume/karma11g2.jpg",
         cord: "2411004558",
         incense: "파촐리 레몬그라스 오렌지"
     },
@@ -4447,7 +4447,7 @@ export default [
         itemtotal: 30000,
         category: "고체향수", category2: "perfume",
         img: "./images/solid_perfume/veganLeatherJacket11g1.jpg",
-        img: "./images/solid_perfume/veganLeatherJacket11g2.jpg",
+        img2: "./images/solid_perfume/veganLeatherJacket11g2.jpg",
         cord: "2412452445",
         incense: "크롤브 통카"
     },
@@ -4461,7 +4461,7 @@ export default [
         itemtotal: 30000,
         category: "고체향수", category2: "perfume",
         img: "./images/solid_perfume/vanillary11g1.jpg",
-        img: "./images/solid_perfume/vanillary11g2.jpg",
+        img2: "./images/solid_perfume/vanillary11g2.jpg",
         cord: "2204495550",
         incense: "통카 바닐라 자스민",
         desc: "풍성한 바닐라 향기를 찾고 계신가요?"

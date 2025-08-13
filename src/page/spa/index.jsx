@@ -1,7 +1,8 @@
-import React from 'react';
+import React from "react";
+import { SpaStyle } from "./style";
 
 const SPA = () => {
-    return <div></div>;
+  return <SpaStyle></SpaStyle>;
 };
 
 export default SPA;
