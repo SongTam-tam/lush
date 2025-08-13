@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderStyle = styled.header`
+<<<<<<< HEAD
     width: 100%;
    position: fixed;
    top: 0;
@@ -37,6 +38,39 @@ export const HeaderStyle = styled.header`
             /* position: absolute;
             top: 53px;
             left: 77.9167vw; */
+=======
+  width: 100%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 1000;
+  .inner {
+    height: 163px;
+    position: relative;
+    &::after {
+      background-color: #444;
+      content: "";
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      top: 93px;
+    }
+    .logo {
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .userIcon {
+      position: absolute;
+      top: 35px;
+      right: 60px;
+      display: flex;
+      align-items: center;
+      gap: 17px;
+    }
+    .user {
+>>>>>>> dd1d993 (“추가”)
       color: #fff;
       font-size: 16px;
       font-weight: 500;
@@ -55,6 +89,23 @@ export const HeaderStyle = styled.header`
             color: #b6d72a;
           }
         }
+<<<<<<< HEAD
+=======
+        .loginicon {
+          color: #fff;
+          font-size: 24px;
+          &:hover {
+            color: #b6d72a;
+          }
+        }
+        .logouticon {
+          color: #fff;
+          font-size: 24px;
+          &:hover {
+            color: #b6d72a;
+          }
+        }
+>>>>>>> dd1d993 (“추가”)
       }
     }
   }

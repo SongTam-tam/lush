@@ -11,6 +11,10 @@ export { default as BestDetail } from "./bestDetail";
 export { default as NewDetail } from "./newDetail";
 export { default as NotFiles } from "./notFile";
 export { default as Login } from "./login";
+<<<<<<< HEAD
+=======
+export { default as Logout } from "./logout";
+>>>>>>> dd1d993 (“추가”)
 export { default as Join } from "./join";
 export { default as MyPage } from "./mypage";
 export { default as Cart } from "./cart";

@@ -17,6 +17,10 @@ import {
   Login,
   Join,
   Cart,
+<<<<<<< HEAD
+=======
+  Logout,
+>>>>>>> dd1d993 (“추가”)
 } from "./page";
 import NotFile from "./page/notFile";
 
@@ -37,6 +41,10 @@ const App = () => {
             <Route path="store" element={<Store />} />
             <Route path="about" element={<About />} />
             <Route path="login" element={<Login />} />
+<<<<<<< HEAD
+=======
+            <Route path="logout" element={<Logout />} />
+>>>>>>> dd1d993 (“추가”)
             <Route path="join" element={<Join />} />
             <Route path="cart" element={<Cart />} />
             <Route path="shop">
