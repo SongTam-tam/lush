@@ -1,10 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HeaderStyle = styled.header`
     width: 100%;
-   position: fixed;
-   top: 0;
-   left: 0;
+   position: relative;
     background-color: rgba(0, 0, 0,1);
     z-index: 1000;
     .inner {
@@ -37,25 +35,25 @@ export const HeaderStyle = styled.header`
             /* position: absolute;
             top: 53px;
             left: 77.9167vw; */
-            color: #fff;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .lcons {
-            display: flex;
-            gap: 25px;
-            li{
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                i{
-                    color:#fff;
-                    font-size: 24px;
-                    &:hover{
-                        color:#B6D72A;
-                    }
-                }
-            }
-        }
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
     }
+    .lcons {
+      display: flex;
+      gap: 25px;
+      li {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        i {
+          color: #fff;
+          font-size: 24px;
+          &:hover {
+            color: #b6d72a;
+          }
+        }
+      }
+    }
+  }
 `;

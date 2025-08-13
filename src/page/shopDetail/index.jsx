@@ -1,7 +1,16 @@
-import React from "react";
+import ShopDetailTop from "../../component/shopDetail/content1/ShopDetailTop";
+import DetailReview from "../../component/shopDetail/content2/DetailReview";
+import { ShopDetailstyle } from "./style";
 
 const ShopDetail = () => {
-  return <div></div>;
+  return (
+    <ShopDetailstyle>
+      <div className="inner">
+        <ShopDetailTop />
+        <DetailReview />
+      </div>
+    </ShopDetailstyle>
+  );
 };
 
 export default ShopDetail;
