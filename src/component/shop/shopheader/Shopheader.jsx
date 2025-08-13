@@ -1,10 +1,16 @@
-import React from 'react';
+import { Shopheaderstyled } from "./style";
 
 const Shopheader = () => {
   return (
-    <div>
-      
-    </div>
+    <Shopheaderstyled className="subheader">
+      <ul>
+        <li className="on">BATH</li>
+        <li>FACE</li>
+        <li>BODY</li>
+        <li>HAIR</li>
+        <li>FRAGRANCE</li>
+      </ul>
+    </Shopheaderstyled>
   );
 };
 

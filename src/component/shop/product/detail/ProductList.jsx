@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Liststyle } from "./style";
 
 const ProductList = ({
   id,
@@ -14,7 +15,7 @@ const ProductList = ({
   img2,
 }) => {
   return (
-    <li>
+    <Liststyle>
       <Link to="/shop/shopDetail" className="product_img">
         <img src={img} alt={title} />
       </Link>
@@ -24,7 +25,7 @@ const ProductList = ({
           <h4>₩ {price2}</h4>
         </Link>
       </div>
-    </li>
+    </Liststyle>
   );
 };
 
