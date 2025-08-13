@@ -1,38 +1,40 @@
 import styled from "styled-components";
 
 export const HeaderStyle = styled.header`
-  width: 100%;
-  position: relative;
-  background-color: rgba(0, 0, 0, 1);
-  z-index: 1000;
-  .inner {
-    height: 163px;
-    position: relative;
-    &::after {
-      background-color: #444;
-      content: "";
-      width: 100%;
-      height: 1px;
-      position: absolute;
-      left: 0;
-      top: 93px;
-    }
-    .logo {
-      position: absolute;
-      top: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    .userIcon {
-      position: absolute;
-      top: 35px;
-      right: 60px;
-      display: flex;
-      align-items: center;
-      gap: 17px;
-    }
-    .user {
-      /* position: absolute;
+    width: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+    background-color: rgba(0, 0, 0,1);
+    z-index: 1000;
+    .inner {
+        height: 163px;
+        position: relative;
+        &::after {
+            background-color: #444;
+            content: '';
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            left: 0;
+            top: 93px;
+        }
+        .logo {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .userIcon{
+            position: absolute;
+            top: 35px;
+            right: 60px;
+            display: flex;
+            align-items: center;
+            gap: 17px;
+        }
+        .user {
+            /* position: absolute;
             top: 53px;
             left: 77.9167vw; */
       color: #fff;

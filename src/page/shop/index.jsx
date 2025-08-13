@@ -8,6 +8,7 @@ const Shop = () => {
     <ShopStyle>
       <Visual />
       <BestMain />
+  
       <ProductMain />
     </ShopStyle>
   );
