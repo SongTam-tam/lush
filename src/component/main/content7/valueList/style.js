@@ -10,6 +10,7 @@ li{
     height: 965px;
     .pic{
         position: absolute;
+        overflow: hidden;
         left: 0;
         top: 0;
         width: 100%;
@@ -18,6 +19,57 @@ li{
             width: 100%;
             height: 100%;
         }
+    }
+    .icon{
+      position: absolute;
+      z-index: 10;
+      width: 140px;
+      height: 112px;
+      top: 205px;
+      left: 50%;
+      transform: translateX(-50%);
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .valueTextBox{
+      text-align: center;
+      position: absolute;
+      z-index: 10;
+      top: 350px;
+      left: 50%;
+      color: #fff;
+      transform: translateX(-50%);
+      strong{
+        display: block;
+        font-size: 40px;
+        font-weight: 600;
+   
+        margin-bottom: 25px;
+      }
+      p{
+        font-size: 18px;
+        font-weight: 500px;
+        color: #dbdbdb;
+        margin-bottom: 68px;
+      }
+      span{
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+      position: relative;
+      &::after{
+        content: '';
+        background-color: #fff;
+        width: 58px;
+        height: 0.4px;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      }
     }
 }
 .swiper {
@@ -61,6 +113,7 @@ li{
   position: relative;
   overflow: hidden;
   border-radius: 4px;
+  display: none;
 }
 
 .progress-bar::before {
@@ -113,6 +166,40 @@ height: 3px;
 position: absolute;
 left: 0;
 top: 0;
+  }
+}
+.swiper-button-next{
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 133px;
+  top: 365px;
+  background-image: url(./images/icons/arrow_right_non.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  &::after{
+    content: none;
+  }
+  &:hover{
+    background-image: url(./images/icons/arrow_right_hover.png);
+  }
+}
+.swiper-button-prev{
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 133px;
+  top: 365px;
+  background-image: url(./images/icons/arrow_left_non.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  &::after{
+    content: none;
+  }
+  &:hover{
+    background-image: url(./images/icons/arrow_left_hover.png);
   }
 }
 `
