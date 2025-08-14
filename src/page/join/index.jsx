@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+
+const Join = () => {
+  return <div></div>;
+=======
+>>>>>>> 5f9e158d9aae61bbac892fe016fffd6a90d71ad7
 import React, { useRef, useState } from "react";
 import { JoinStyle } from "./style";
 import { useDispatch } from "react-redux";
@@ -224,6 +233,10 @@ const Join = () => {
       </div>
     </JoinStyle>
   );
+<<<<<<< HEAD
+=======
+>>>>>>> dd1d993 (“추가”)
+>>>>>>> 5f9e158d9aae61bbac892fe016fffd6a90d71ad7
 };
 
 export default Join;

@@ -1,4 +1,9 @@
 import styled from "styled-components";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 5f9e158d9aae61bbac892fe016fffd6a90d71ad7
 
 export const JoinStyle = styled.div`
   .inner {
@@ -183,3 +188,7 @@ export const JoinStyle = styled.div`
     }
   }
 `;
+<<<<<<< HEAD
+=======
+>>>>>>> dd1d993 (“추가”)
+>>>>>>> 5f9e158d9aae61bbac892fe016fffd6a90d71ad7
