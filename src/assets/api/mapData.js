@@ -1,0 +1,43 @@
+export default [
+    { id: 1, title: '러쉬 신세계백화점 명동역점', lat: 37.56239, lng: 126.9906, region: '서울' },
+    {
+        id: 2,
+        title: '러쉬 롯데인천터미널점',
+        lat: 37.4426914,
+        lng: 126.701282,
+        region: '인천/경기',
+        isOn: false,
+    },
+    {
+        id: 3,
+        title: '러쉬 신세계사우스시티',
+        lat: 36.8194876,
+        lng: 127.1559537,
+        region: '충청',
+        isOn: false,
+    },
+    {
+        id: 4,
+        title: '러쉬 신세계백화점 광주점',
+        lat: 35.1603087,
+        lng: 126.8801307,
+        region: '광주',
+        isOn: false,
+    },
+    {
+        id: 5,
+        title: '러쉬 제주점 ',
+        lat: 33.2392241,
+        lng: 126.3193748,
+        region: '제주',
+        isOn: false,
+    },
+    {
+        id: 6,
+        title: '러쉬 롯데백화점 대구점',
+        lat: 35.8758942,
+        lng: 128.5963119,
+        region: '대구',
+        isOn: false,
+    },
+];
