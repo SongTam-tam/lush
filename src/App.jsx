@@ -18,14 +18,18 @@ import {
     Join,
     Cart,
     Logout,
+    Search,
 } from './page';
 import NotFile from './page/notFile';
+import PageTop from './ui/PageTop';
 
 const App = () => {
     return (
         <>
             <GlobalStyle />
+
             <BrowserRouter>
+                <PageTop />
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Main />} />
@@ -41,6 +45,9 @@ const App = () => {
                         <Route path="logout" element={<Logout />} />
                         <Route path="join" element={<Join />} />
                         <Route path="cart" element={<Cart />} />
+                        <Route path="search">
+                            <Route index element={<Search />} />
+                        </Route>
                         <Route path="shop">
                             <Route index element={<Shop />} />
                             <Route path=":shopDetail" element={<ShopDetail />} />

@@ -10,36 +10,76 @@ const Content3 = () => {
   const sectionRef = useRef();
 
   useGSAP(() => {
-    const sideTargets = sectionRef.current.querySelectorAll(
-      ".side-bar h3, .side-bar h4"
-    );
-    const textTargets = sectionRef.current.querySelectorAll(
-      ".Scroll li, .Scroll p"
-    );
+    const steps = sectionRef.current.querySelectorAll("ul");
 
-    // 점, 선 색 변경
-    gsap.to(sideTargets, {
-      backgroundColor: "#B6D72A",
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 60%",
-        end: "bottom 80%",
-        scrub: true,
-        // markers: true,
-      },
-      stagger: 0.3,
-    });
+    steps.forEach((step) => {
+      const side1 = step.querySelector(".side-bar h3");
+      const side2 = step.querySelector(".side-bar h4");
+      const textLi = step.querySelector("li");
+      const textP = step.querySelector("p");
+      const textSpan = step.querySelector("span");
 
-    // STEP, 설명 텍스트 색 변경
-    gsap.to(textTargets, {
-      color: "#B6D72A",
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 60%",
-        end: "bottom 80%",
-        scrub: true,
-      },
-      stagger: 0.3,
+      if (side1) {
+        gsap.to(side1, {
+          backgroundColor: "#B6D72A",
+          scrollTrigger: {
+            trigger: step,
+            start: "top 45%",
+            end: "bottom 25%",
+            scrub: 1.5,
+            // markers: true,
+          },
+        });
+      }
+
+      if (side2) {
+        gsap.to(side2, {
+          backgroundColor: "#B6D72A",
+          scrollTrigger: {
+            trigger: step,
+            start: "top 45%",
+            end: "bottom 25%",
+            scrub: 1.5,
+            // markers: true,
+          },
+        });
+      }
+
+      if (textLi) {
+        gsap.to(textLi, {
+          color: "#B6D72A",
+          scrollTrigger: {
+            trigger: step,
+            start: "top 45%",
+            end: "bottom 25%",
+            scrub: 1.5,
+          },
+        });
+      }
+
+      if (textP) {
+        gsap.to(textP, {
+          color: "#B6D72A",
+          scrollTrigger: {
+            trigger: step,
+            start: "top 45%",
+            end: "bottom 25%",
+            scrub: 1.5,
+          },
+        });
+      }
+
+      if (textSpan) {
+        gsap.to(textSpan, {
+          color: "#fff",
+          scrollTrigger: {
+            trigger: step,
+            start: "top 45%",
+            end: "bottom 25%",
+            scrub: 1.5,
+          },
+        });
+      }
     });
   }, []);
 
@@ -117,7 +157,15 @@ const Content3 = () => {
           </ul>
         </div>
       </div>
-      <div className="right-section"></div>
+      <div className="right-section">
+        <video
+          src="./videos/hara-v.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        ></video>
+      </div>
     </Content3lStyle>
   );
 };

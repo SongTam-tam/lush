@@ -15,3 +15,4 @@ export { default as Logout } from './logout';
 export { default as Join } from './join';
 export { default as MyPage } from './mypage';
 export { default as Cart } from './cart';
+export { default as Search } from './search';
