@@ -1,14 +1,20 @@
 import { Shopheaderstyled } from "./style";
 
-const Shopheader = () => {
+const Shopheader = ({ selected, onSelect }) => {
+  const menuData = ["bath", "shower", "face", "body", "hair", "fragrance"];
+
   return (
     <Shopheaderstyled className="subheader">
       <ul>
-        <li className="on">BATH</li>
-        <li>FACE</li>
-        <li>BODY</li>
-        <li>HAIR</li>
-        <li>FRAGRANCE</li>
+        {menuData.map((key) => (
+          <li
+            key={key}
+            onClick={() => onSelect(key)}
+            className={selected === key ? "on" : ""}
+          >
+            {key.toUpperCase()}
+          </li>
+        ))}
       </ul>
     </Shopheaderstyled>
   );

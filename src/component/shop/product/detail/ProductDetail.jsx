@@ -1,25 +1,31 @@
 import ProductList from "./ProductList";
 import shopData from "../../../../assets/api/shopData";
 import { ItemLi, ProductListStyle } from "./style";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import HoverDetail from "./HoverDetail";
+import Pagination from "../../../../common/pagination/Pagination";
 
-const ProductDetail = () => {
+const normalize = (v) =>
+  String(v ?? "")
+    .trim()
+    .toLowerCase();
+
+const ProductDetail = ({ selected }) => {
   const [hoverId, setHoverId] = useState(null);
+
+  // selected 없으면 "bath" 기본
+  const active = normalize(selected || "bath");
+
+  const filteredData = useMemo(() => {
+    return shopData.filter((item) => item.category2 === selected);
+  }, [selected]);
 
   return (
     <div>
-      <h2>BATH</h2>
-      <details>
-        <summary>필터 선택</summary>
-        <ul>
-          <li>aa</li>
-          <li>최신순</li>
-          <li>인기순</li>
-        </ul>
-      </details>
+      <h2>{active.toUpperCase()}</h2>
+
       <ProductListStyle className="product_list">
-        {shopData.map((item) => (
+        {filteredData.map((item) => (
           <ItemLi
             key={item.id}
             onMouseEnter={() => setHoverId(item.id)}
@@ -32,6 +38,7 @@ const ProductDetail = () => {
             )}
           </ItemLi>
         ))}
+        <Pagination />
       </ProductListStyle>
     </div>
   );

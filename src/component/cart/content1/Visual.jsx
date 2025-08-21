@@ -3,7 +3,8 @@ import { Visualstyle } from "./style";
 const Visual = () => {
   return (
     <Visualstyle>
-      <h2>Cart</h2>
+      <img src="/images/cart/cartvisual.png" alt="cart" />
+      <h2>CART</h2>
     </Visualstyle>
   );
 };

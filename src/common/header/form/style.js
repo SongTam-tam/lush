@@ -91,14 +91,14 @@ export const FormStyle2 = styled.form`
         left: 50%;
         transform: translateX(-50%);
         height: 1px;
-        background-color: #d1d1d1;
+        /* background-color: #d1d1d1; */
     }
 `;
 
 export const IconStyle2 = styled.button`
     position: absolute;
     top: 35px;
-    left: 60px;
+    left: 70px;
     display: flex;
     justify-content: center;
     align-items: center;

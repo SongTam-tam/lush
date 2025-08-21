@@ -11,6 +11,7 @@ export const Shopheaderstyled = styled.div`
       font-size: 20px;
       font-weight: 700;
 
+      cursor: pointer;
       display: flex;
       height: 80px;
       padding: 0 37px;

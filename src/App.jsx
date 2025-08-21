@@ -50,7 +50,7 @@ const App = () => {
                         </Route>
                         <Route path="shop">
                             <Route index element={<Shop />} />
-                            <Route path=":shopDetail" element={<ShopDetail />} />
+                            <Route path="shopDetai/:id" element={<ShopDetail />} />
                         </Route>
                     </Route>
                     <Route path="*" element={<NotFile />} />

@@ -3,6 +3,7 @@ import shopData from '../../assets/api/shopData';
 
 const initialState = {
     search: shopData,
+    searchdata: '',
 };
 
 export const searchSlice = createSlice({
@@ -10,7 +11,14 @@ export const searchSlice = createSlice({
     initialState,
     reducers: {
         onSearch: (state, action) => {
-            state.search = state.search.filter((item) => item.title !== action.payload);
+            state.search = shopData.filter(
+                (item) =>
+                    item.title.toLowerCase().includes(action.payload.toLowerCase()) ||
+                    item.category.toLowerCase().includes(action.payload.toLowerCase())
+            );
+        },
+        searchText: (state, action) => {
+            state.searchdata = action.payload;
         },
     },
 });

@@ -1,18 +1,6 @@
 import { Link } from "react-router-dom";
 
-const ProductList = ({
-  id,
-  title,
-  price,
-  price2,
-  rate,
-  quantity,
-  itemtotal,
-  category,
-  category2,
-  img,
-  img2,
-}) => {
+const ProductList = ({ title, price2, img }) => {
   return (
     <li>
       <Link to="/shop/shopDetail" className="product_img">

@@ -1,46 +1,31 @@
 import { ProductTypeStyle } from "./style";
 
-const ProductType = () => {
+const ProductType = ({ selected, onSelect }) => {
+  const menuData = [
+    { key: "bath", img: "./images/shop/Bath.png", label: "BATH" },
+    { key: "shower", img: "./images/shop/Shower.png", label: "SHOWER" },
+    { key: "face", img: "./images/shop/Face.png", label: "FACE" },
+    { key: "body", img: "./images/shop/Body.png", label: "BODY" },
+    { key: "hair", img: "./images/shop/Hair.png", label: "HAIR" },
+    {
+      key: "fragrance",
+      img: "./images/shop/Fragrance.png",
+      label: "FRAGRANCE",
+    },
+  ];
+
   return (
     <ProductTypeStyle>
       <ul className="product-type">
-        <li>
-          <div className="overlay"></div>
-          <div className="img_wrap">
-            <img src="./images/shop/Bath.png" alt="Bath" />
-            <h3>Bath</h3>{" "}
-          </div>
-        </li>
-        <li>
-          <div className="img_wrap">
-            <img src="./images/shop/Shower.png" alt="Shower" />
-            <h3>Shower</h3>
-          </div>
-        </li>
-        <li>
-          <div className="img_wrap">
-            <img src="./images/shop/Face.png" alt="FACE" />
-            <h3>FACE</h3>
-          </div>
-        </li>
-        <li>
-          <div className="img_wrap">
-            <img src="./images/shop/Body.png" alt="Body" />
-            <h3>Body</h3>
-          </div>
-        </li>
-        <li>
-          <div className="img_wrap">
-            <img src="./images/shop/Hair.png" alt="Hair" />
-            <h3>Hair</h3>
-          </div>
-        </li>
-        <li>
-          <div className="img_wrap">
-            <img src="./images/shop/Fragrance.png" alt="Fragrance" />
-            <h3>Fragrance</h3>
-          </div>
-        </li>
+        {menuData.map(({ key, img, label }) => (
+          <li key={key} onClick={() => onSelect(key)}>
+            <div className="img_wrap">
+              {selected !== key && <div className="overlay"></div>}
+              <img src={img} alt={label} />
+              <h3>{label}</h3>
+            </div>
+          </li>
+        ))}
       </ul>
     </ProductTypeStyle>
   );

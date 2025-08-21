@@ -4,6 +4,7 @@ import valueReducer from './modules/ValueSlice';
 import optionReducer from './modules/OptionSlice';
 import authReducer from './modules/authSlice';
 import searchReducer from './modules/SearchSlice';
+import cartReducer from './modules/CartSlice';
 
 const store = configureStore({
     reducer: {
@@ -12,6 +13,7 @@ const store = configureStore({
         option: optionReducer,
         auth: authReducer,
         search: searchReducer,
+        cart: cartReducer,
     },
 });
 

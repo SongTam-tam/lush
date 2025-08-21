@@ -1,27 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { HeaderStyle } from './style';
 import Nav from './nav/Nav';
 import HeaderForm from './form/HeaderForm';
 import { LuUserRound, LuLogIn, LuLogOut } from 'react-icons/lu';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Links, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import HeaderForm2 from './form/HeaderForm2';
 
 const Header = () => {
     const { authed, user } = useSelector((state) => state.auth);
     const [inpOn, setInpOn] = useState(true);
+    const searchRef = useRef();
     const nav = useNavigate();
-
+    const onSearch = () => {
+        setInpOn(false);
+        setTimeout(() => {
+            searchRef.current.focus();
+        }, 200);
+    };
     return (
         <HeaderStyle>
             {inpOn ? (
-                <HeaderForm2 setInpOn={setInpOn} />
+                <HeaderForm2 onSearch={onSearch} />
             ) : (
                 <div className="filter-bg" onClick={() => setInpOn(true)}>
                     <div className="input-bg" onClick={(e) => e.stopPropagation()}>
                         <i></i>
-                        <HeaderForm />
+                        <HeaderForm searchRef={searchRef} setInpOn={setInpOn} />
                     </div>
                 </div>
             )}
@@ -44,9 +50,11 @@ const Header = () => {
                         </i>
                     </li>
                     <li>
-                        <i>
-                            <HiOutlineShoppingBag />
-                        </i>
+                        <Link to="/cart">
+                            <i>
+                                <HiOutlineShoppingBag />
+                            </i>
+                        </Link>
                     </li>
                     <li>
                         {authed ? (

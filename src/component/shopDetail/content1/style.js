@@ -1,27 +1,34 @@
 import styled from "styled-components";
 
-export const ShopDetailstyle = styled.section`
-  .inner {
-    width: 1600px;
-    margin-top: 130px;
-    .p_left {
-      img {
-        width: 600px;
-        height: 600px;
-      }
-    }
-  }
-`;
-
 export const ShopDetailTopstyle = styled.div`
   display: flex;
   .p_left {
     width: 800px;
     height: 900px;
     padding: 150px 100px;
-    img {
+    .swiper {
       width: 600px;
       height: 600px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #000;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+
+      /* Center slide text vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 600px;
+      height: 600px;
+      object-fit: cover;
     }
   }
   .p_right {

@@ -17,18 +17,8 @@ export const ProductTypeStyle = styled.div`
     display: flex;
     flex-wrap: nowrap;
     margin-top: 150px;
-    .img_wrap {
-      width: 320px;
-      height: 440px;
-      position: relative;
-      display: block;
-
-      img {
-        width: 320px;
-        height: 440px;
-        object-fit: cover;
-        display: block;
-      }
+    li {
+      cursor: pointer;
       .overlay {
         position: absolute;
         top: 0;
@@ -37,15 +27,29 @@ export const ProductTypeStyle = styled.div`
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
       }
-      h3 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 36px;
-        font-weight: 600;
-        color: #fff;
-        /* color: red; */
+      .img_wrap {
+        width: 320px;
+        height: 440px;
+        position: relative;
+        display: block;
+
+        img {
+          width: 320px;
+          height: 440px;
+          object-fit: cover;
+          display: block;
+        }
+
+        h3 {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 36px;
+          font-weight: 600;
+          color: #fff;
+          /* color: red; */
+        }
       }
     }
   }

@@ -14,6 +14,10 @@ const StoreMap = () => {
             center: new kakao.maps.LatLng(36.5, 127.8),
             level: 13,
         };
+        const markerImg = '/images/store/map_pin.png';
+        const markerSize = new kakao.maps.Size(42, 50);
+        const imageOption = { offset: new kakao.maps.Point(27, 69) };
+        const markerImage = new kakao.maps.MarkerImage(markerImg, markerSize, imageOption);
         const map = new kakao.maps.Map(container, options);
         const maxLevel = map.getLevel();
         map.setMaxLevel(maxLevel);
@@ -30,6 +34,7 @@ const StoreMap = () => {
                 map: map,
                 position: new kakao.maps.LatLng(data.lat, data.lng),
                 title: data.title,
+                image: markerImage,
             });
             kakao.maps.event.addListener(marker, 'click', () => {
                 const position = new kakao.maps.LatLng(data.lat, data.lng);

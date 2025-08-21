@@ -68,17 +68,16 @@ export const Liststyle = styled.li`
     }
   }
 `;
-export const HoverDetailStyle = styled.li`
+export const HoverDetailStyle = styled.div`
   width: 330px;
   height: 500px;
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 60px;
+  position: relative;
   .product_img {
     width: 330px;
     height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     img {
       width: 300px;
       height: 300px;
@@ -87,34 +86,45 @@ export const HoverDetailStyle = styled.li`
   }
   .title {
     margin-top: 40px;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-45%);
+    h3 {
+      white-space: nowrap;
 
-    a {
-      h3 {
-        color: var(--Main-DarkGray, #353535);
-        text-align: center;
-        font-size: 20px;
-        font-weight: 600;
-      }
-      h4 {
-        color: var(--Main-DarkGray, #353535);
-        text-align: center;
+      color: var(--Main-DarkGray, #353535);
+      text-align: center;
 
-        font-size: 18px;
-        font-weight: 500;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    h4 {
+      color: var(--Main-DarkGray, #353535);
+      text-align: center;
 
-        margin-top: 15px;
-      }
-      .bottom-box {
-        width: 330px;
-        height: 40px;
-        background: rgba(0, 0, 0, 0.5);
-        .icon-box {
-          display: flex;
-          i {
-            color: white;
-            width: 24px;
-            height: 24px;
-          }
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+  .bottom-box {
+    width: 330px;
+    padding: 10px 14px;
+    justify-content: flex-end;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    bottom: 0;
+    .icon-box {
+      display: flex;
+      justify-content: flex-end;
+      i {
+        display: flex;
+        color: white;
+
+        &.CiHeart {
+          margin-right: 8px;
         }
       }
     }

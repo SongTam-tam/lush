@@ -2,15 +2,20 @@ import Shopheader from "../shopheader/Shopheader";
 import ProductDetail from "./detail/ProductDetail";
 import ProductType from "./ProductType";
 import { ProductStyle } from "./style";
+import { useState } from "react";
 
 const ProductMain = () => {
+  const [selected, setSelected] = useState("bath");
+
   return (
     <ProductStyle>
-      <h2>PRODUCT</h2>
-      <ProductType />
-      <Shopheader />
+      <h2>OUR PRODUCT</h2>
+
+      <ProductType selected={selected} onSelect={setSelected} />
+
+      <Shopheader selected={selected} onSelect={setSelected} />
       <div className="inner">
-        <ProductDetail />
+        <ProductDetail selected={selected} />
       </div>
     </ProductStyle>
   );
