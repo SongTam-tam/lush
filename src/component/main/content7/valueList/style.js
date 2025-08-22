@@ -20,17 +20,14 @@ export const ValueListStyle = styled.div`
                 height: 100%;
             }
         }
-        .icon {
+        .iconss {
             position: absolute;
             z-index: 10;
             width: 140px;
             height: 112px;
-            top: 205px;
+            top: 205px !important ;
             left: 50%;
             transform: translateX(-50%);
-            &:last-child {
-                top: 205px;
-            }
             img {
                 width: 100%;
                 height: 100%;
@@ -75,19 +72,7 @@ export const ValueListStyle = styled.div`
             }
         }
     }
-    .icon {
-        position: absolute;
-        z-index: 10;
-        width: 140px;
-        height: 112px;
-        top: 205px;
-        left: 50%;
-        transform: translateX(-50%);
-        img {
-            width: 100%;
-            height: 100%;
-        }
-    }
+
     .swiper {
         width: 100%;
         height: 100%;

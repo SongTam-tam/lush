@@ -19,6 +19,7 @@ import {
     Cart,
     Logout,
     Search,
+    MyPage,
 } from './page';
 import NotFile from './page/notFile';
 import PageTop from './ui/PageTop';
@@ -44,13 +45,14 @@ const App = () => {
                         <Route path="login" element={<Login />} />
                         <Route path="logout" element={<Logout />} />
                         <Route path="join" element={<Join />} />
+                        <Route path="mypage" element={<MyPage />} />
                         <Route path="cart" element={<Cart />} />
                         <Route path="search">
                             <Route index element={<Search />} />
                         </Route>
                         <Route path="shop">
                             <Route index element={<Shop />} />
-                            <Route path="shopDetai/:id" element={<ShopDetail />} />
+                            <Route path="shopDetail/:id" element={<ShopDetail />} />
                         </Route>
                     </Route>
                     <Route path="*" element={<NotFile />} />

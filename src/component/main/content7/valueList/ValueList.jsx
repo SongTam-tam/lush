@@ -82,7 +82,7 @@ const ValueList = () => {
             const activeSlide = swiper.slides[swiper.activeIndex];
             if (!activeSlide) return;
 
-            const icon = activeSlide.querySelector('.icon');
+            const icon = activeSlide.querySelector('.iconss');
             const text = activeSlide.querySelector('.valueTextBox strong');
             const miniText = activeSlide.querySelector('.valueTextBox p');
             const detail = activeSlide.querySelector('.valueTextBox span');
@@ -149,7 +149,7 @@ const ValueList = () => {
                 effect={'fade'}
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
                 autoplay={{
-                    delay: 1000000,
+                    delay: 2200,
                     disableOnInteraction: false,
                 }}
                 loop={true}
