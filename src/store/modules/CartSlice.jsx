@@ -9,6 +9,11 @@ const initialState = {
     carts: localStorage.getItem('carts') ? JSON.parse(localStorage.getItem('carts')) : [],
     priceTotal: 0,
     quantityTotal: 0,
+    paymentCart: localStorage.getItem('paymentCart')
+        ? JSON.parse(localStorage.getItem('paymentCart'))
+        : [],
+    paymentTotal: 0,
+    paymentPriceTotal: 0,
 };
 
 export const CartSlice = createSlice({
@@ -80,6 +85,14 @@ export const CartSlice = createSlice({
             if (item) {
                 item.chk = !item.chk;
             }
+        },
+        payment: (state, action) => {
+            state.paymentCart = state.carts.filter((item) => item.isChk === true);
+            state.paymentTotal = state.paymentCart.reduce((sum, item) => sum + item.quantity, 0);
+            state.paymentPriceTotal = state.paymentCart.reduce(
+                (sum, item) => sum + item.price * item.quantity,
+                0
+            );
         },
     },
 });

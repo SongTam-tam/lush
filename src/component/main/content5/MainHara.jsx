@@ -140,14 +140,14 @@ const MainHara = () => {
             );
         },
         {
-            scope: limeTextRef,
-            scope: whiteTextRef,
-            scope: scrollRef,
-            scope: upRef,
-            scope: downRef,
-            scope: imgRef,
-            scope: bigTextRef,
-            scope: imgBigRef,
+            // scope: limeTextRef,
+            // scope: whiteTextRef,
+            // scope: scrollRef,
+            // scope: upRef,
+            // scope: downRef,
+            // scope: imgRef,
+            // scope: bigTextRef,
+            // scope: imgBigRef,
         }
     );
     useGSAP(

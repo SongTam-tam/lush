@@ -160,14 +160,14 @@ const Campaign = () => {
         },
 
         {
-            scope: titleRef1,
-            scope: titleRef2,
-            scope: titleRef3,
-            scope: titleRef4,
-            scope: imgRef1,
-            scope: imgRef2,
-            scope: imgRef3,
-            scope: imgRef4,
+            // scope: titleRef1,
+            // scope: titleRef2,
+            // scope: titleRef3,
+            // scope: titleRef4,
+            // scope: imgRef1,
+            // scope: imgRef2,
+            // scope: imgRef3,
+            // scope: imgRef4,
         }
     );
     return (

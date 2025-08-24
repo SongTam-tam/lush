@@ -5,16 +5,65 @@ import { useDispatch } from 'react-redux';
 import { authActions } from '../../store/modules/authSlice';
 
 const Login = () => {
-    const REST_API_KEY = `66f9b61559ca03bd4a7b46dab32c81e8`;
-    const REDIRECT_URI = `http://localhost:5173`;
-    const link = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code&prompt=login`;
+    const REST_API_KEY = import.meta.env.VITE_REST_API_KEY;
+    const REDIRECT_URI = import.meta.env.VITE_REDIRECT_URI;
+
     // console.log(link);
-    const code = new URL(window.location.href).searchParams.get('code');
+
     const loginKakao = () => {
+        const link = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${encodeURIComponent(
+            REDIRECT_URI
+        )}&response_type=code`;
         window.location.href = link;
     };
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    console.log(REST_API_KEY, REDIRECT_URI);
+    useEffect(() => {
+        const code = new URL(window.location.href).searchParams.get('code');
+        if (!code) return;
+
+        const fetchToken = async () => {
+            try {
+                // 1️⃣ 토큰 요청
+                const tokenRes = await fetch('https://kauth.kakao.com/oauth/token', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
+                    },
+                    body: new URLSearchParams({
+                        grant_type: 'authorization_code',
+                        client_id: REST_API_KEY,
+                        redirect_uri: REDIRECT_URI,
+                        code,
+                    }),
+                });
+
+                const tokenData = await tokenRes.json();
+                if (!tokenData.access_token) throw new Error('토큰 발급 실패');
+
+                localStorage.setItem('kakao_access_token', tokenData.access_token);
+
+                // 2️⃣ 사용자 정보 요청
+                const userRes = await fetch('https://kapi.kakao.com/v2/user/me', {
+                    method: 'GET',
+                    headers: {
+                        Authorization: `Bearer ${tokenData.access_token}`,
+                        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
+                    },
+                });
+
+                const userInfo = await userRes.json();
+                dispatch(authActions.loginKakao(userInfo));
+                navigate('/');
+            } catch (err) {
+                console.error('카카오 로그인 에러:', err);
+            }
+        };
+
+        fetchToken();
+    }, [dispatch, navigate, REST_API_KEY, REDIRECT_URI]);
+
     const [isHover, setIsHover] = useState(false);
     const [user, setUser] = useState({
         userid: '',
