@@ -66,7 +66,6 @@ const Login = () => {
 
   const [isHover, setIsHover] = useState(false);
 
-  // ⬇ 추가: 체크박스 상태 관리
   const [rememberId, setRememberId] = useState(false);
 
   const [user, setUser] = useState({
@@ -75,7 +74,6 @@ const Login = () => {
   });
   const { userid, password } = user;
 
-  // ⬇ 추가: 페이지 진입 시 저장된 체크 상태/아이디 복원
   useEffect(() => {
     const savedRemember = localStorage.getItem("rememberId") === "true";
     const savedUserId = localStorage.getItem("rememberedUserId") || "";
@@ -102,7 +100,6 @@ const Login = () => {
     dispatch(authActions.login(user));
     const ok = JSON.parse(localStorage.getItem("authed") || "false");
     if (ok) {
-      // 로그인 성공 시 체크 상태에 따라 저장/삭제
       localStorage.setItem("rememberId", String(rememberId));
       if (rememberId) {
         localStorage.setItem("rememberedUserId", userid);
