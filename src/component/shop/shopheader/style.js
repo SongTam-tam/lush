@@ -1,27 +1,35 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Shopheaderstyled = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  ul {
     display: flex;
-    li {
-      font-family: "Lush Handwritten WLat";
-      font-size: 20px;
-      font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 163px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: none;
+    ul {
+        display: flex;
+        li {
+            font-family: 'Lush Handwritten WLat';
+            font-size: 20px;
+            font-weight: 700;
 
-      cursor: pointer;
-      display: flex;
-      height: 80px;
-      padding: 0 37px;
-      justify-content: center;
-      align-items: center;
-      margin-right: 40px;
-      &.on {
-        border-bottom: 3px solid #b6d72a;
-        color: var(--Sub-Lime, #b6d72a);
-      }
+            cursor: pointer;
+            display: flex;
+            height: 80px;
+            padding: 0 37px;
+            justify-content: center;
+            align-items: center;
+            margin-right: 40px;
+            &.on {
+                border-bottom: 3px solid #b6d72a;
+                color: var(--Sub-Lime, #b6d72a);
+            }
+        }
     }
-  }
 `;

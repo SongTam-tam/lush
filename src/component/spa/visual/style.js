@@ -75,18 +75,21 @@ export const SpaVisualStyle = styled.section`
             font-family: Arial, sans-serif; /* 부모 폰트 상속 방지 */
             font-size: 14px;
             outline: none;
-            background-color: transparent;
+            background-color: #000;
+            color: #fff;
         }
 
         .react-datepicker__current-month {
             font-size: 14px;
             font-weight: bold;
+            color: #b6d72a;
         }
 
         .react-datepicker__day-name,
         .react-datepicker__day,
         .react-datepicker__time-name {
             font-size: 12px;
+            color: #fff;
         }
         .react-datepicker-wrapper {
             position: absolute;
@@ -129,25 +132,35 @@ export const SpaVisualStyle = styled.section`
         .react-datepicker__month-container {
             .react-datepicker__header {
                 position: relative;
-                height: 60px;
+                height: 20px;
+                background-color: #000;
                 .react-datepicker__current-month {
-                    top: 0;
+                    top: 8px;
                     left: 50%;
                     transform: translateX(-50%);
+                    color: #fff;
                 }
-                .react-datepicker__day-names {
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    bottom: 0;
-                    font-size: 12px;
-                    display: flex;
-                    gap: 5px;
-                }
+
                 .react-datepicker__navigation--prev {
+                    color: #fff;
                 }
                 .react-datepicker__navigation--next {
                 }
+            }
+        }
+        .react-datepicker__day--selected {
+            color: #fff;
+            background-color: #b6d72a;
+        }
+        .react-datepicker__day-names {
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            /* gap: 5px; */
+            margin-bottom: 10px;
+            .react-datepicker__day-name {
+                color: #a2a2a2;
+                /* margin: 0; */
             }
         }
         .custom-select {
