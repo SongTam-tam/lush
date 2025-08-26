@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux';
 import { HiMiniChevronRight } from 'react-icons/hi2';
 const MypageProfile = () => {
     const { user } = useSelector((state) => state.auth);
+
     return (
         <MypageProfileStyle>
             <div className="profile">
@@ -19,7 +20,7 @@ const MypageProfile = () => {
             </div>
             <div className="profile_name">
                 {/* <p>{user.name} 님</p> */}
-                <p>xxx 님</p>
+                <p>{user.name} 님</p>
                 <span>회원정보변경</span>
             </div>
             <div className="service">

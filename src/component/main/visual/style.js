@@ -3,12 +3,21 @@ import styled from 'styled-components';
 export const VisualContent = styled.section`
     width: 100%;
     height: 917px;
-    background-repeat: no-repeat;
-    background-image: url(./images/main/visual_bg.png);
-    background-size: cover;
-    background-position: 0 0;
-    position: relative;
     overflow: hidden;
+    .bigbg {
+        /* &::after{} */
+        position: absolute;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1080px;
+        background-repeat: no-repeat;
+        background-image: url(./images/main/visual_bg.png);
+        background-size: cover;
+        background-position: 0 0;
+    }
+    /* overflow: hidden; */
     .visual_bg {
         width: 4000px;
         /* height: 100%; */
@@ -31,9 +40,9 @@ export const VisualContent = styled.section`
         font-size: 200px;
         font-style: normal;
         line-height: normal;
-        top: 10%;
+        top: 20%;
         left: 50%;
-        transform: translate(-50%, -10%);
+        transform: translate(-50%, -20%);
     }
     .visualText {
         z-index: 50;

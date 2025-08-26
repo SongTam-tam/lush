@@ -4,23 +4,42 @@ import Nav from './nav/Nav';
 import HeaderForm from './form/HeaderForm';
 import { LuUserRound, LuLogIn, LuLogOut } from 'react-icons/lu';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
-import { Link, Links, useNavigate } from 'react-router-dom';
+import { Link, Links, useLocation, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import HeaderForm2 from './form/HeaderForm2';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const Header = () => {
     const { authed, user } = useSelector((state) => state.auth);
     const [inpOn, setInpOn] = useState(true);
     const searchRef = useRef();
     const nav = useNavigate();
+    const location = useLocation();
     const onSearch = () => {
         setInpOn(false);
         setTimeout(() => {
             searchRef.current.focus();
         }, 200);
     };
+    useEffect(() => {
+        if (location.pathname === '/') {
+            gsap.fromTo(
+                '.header',
+                {
+                    opacity: 0,
+                },
+                {
+                    opacity: 1,
+                    ease: 'ease-in',
+                    duration: 1,
+                    delay: 1.6,
+                }
+            );
+        }
+    }, [location.pathname]);
     return (
-        <HeaderStyle>
+        <HeaderStyle className="header">
             {inpOn ? (
                 <HeaderForm2 onSearch={onSearch} />
             ) : (
@@ -45,9 +64,11 @@ const Header = () => {
 
                 <ul className="lcons">
                     <li>
-                        <i>
-                            <LuUserRound />
-                        </i>
+                        <Link to={authed ? '/mypage' : '/login'}>
+                            <i>
+                                <LuUserRound />
+                            </i>
+                        </Link>
                     </li>
                     <li>
                         <Link to="/cart">

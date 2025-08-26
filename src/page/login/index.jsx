@@ -5,8 +5,8 @@ import { useDispatch } from 'react-redux';
 import { authActions } from '../../store/modules/authSlice';
 
 const Login = () => {
-    const REST_API_KEY = import.meta.env.VITE_REST_API_KEY;
-    const REDIRECT_URI = import.meta.env.VITE_REDIRECT_URI;
+    const REST_API_KEY = import.meta.env.VITE_KAKAO_REST_KEY;
+    const REDIRECT_URI = import.meta.env.VITE_KAKAO_REDIRECT_URI;
 
     // console.log(link);
 
@@ -38,7 +38,7 @@ const Login = () => {
                         code,
                     }),
                 });
-
+                console.log('Token 요청 redirect_uri:', REDIRECT_URI);
                 const tokenData = await tokenRes.json();
                 if (!tokenData.access_token) throw new Error('토큰 발급 실패');
 
@@ -65,29 +65,52 @@ const Login = () => {
     }, [dispatch, navigate, REST_API_KEY, REDIRECT_URI]);
 
     const [isHover, setIsHover] = useState(false);
+
+    const [rememberId, setRememberId] = useState(false);
+
     const [user, setUser] = useState({
         userid: '',
         password: '',
     });
     const { userid, password } = user;
+
+    useEffect(() => {
+        const savedRemember = localStorage.getItem('rememberId') === 'true';
+        const savedUserId = localStorage.getItem('rememberedUserId') || '';
+        setRememberId(savedRemember);
+        if (savedRemember && savedUserId) {
+            setUser((prev) => ({ ...prev, userid: savedUserId }));
+        }
+    }, []);
+
     const changeInput = (e) => {
         const { value, name } = e.target;
         setUser({
             ...user,
             [name]: value,
         });
+        if (name === 'userid' && rememberId) {
+            localStorage.setItem('rememberedUserId', value);
+        }
     };
+
     const onSubmit = (e) => {
         e.preventDefault();
         if (!password.trim() || !userid.trim()) return;
         dispatch(authActions.login(user));
-        const ok = !!localStorage.getItem('auth');
+        const ok = JSON.parse(localStorage.getItem('authed') || 'false');
         if (ok) {
+            localStorage.setItem('rememberId', String(rememberId));
+            if (rememberId) {
+                localStorage.setItem('rememberedUserId', userid);
+            } else {
+                localStorage.removeItem('rememberedUserId');
+            }
             navigate('/');
         } else {
             alert('아이디 또는 비밀번호가 올바르지 않습니다.');
         }
-        setUser({ userid: '', password: '' });
+        setUser({ userid: rememberId ? userid : '', password: '' });
     };
 
     return (
@@ -120,10 +143,25 @@ const Login = () => {
                                 onChange={changeInput}
                             />
                         </p>
-                        <p className="test">Test ID: abc / PW: lush123</p>
+                        <p className="test">Test ID: lush / PW: lush123</p>
                         <p>
-                            <input type="checkbox" name="rememberId" />
-                            <label>아이디 저장</label>
+                            <input
+                                type="checkbox"
+                                id="rememberId"
+                                name="rememberId"
+                                checked={rememberId}
+                                onChange={(e) => {
+                                    const checked = e.target.checked;
+                                    setRememberId(checked);
+                                    localStorage.setItem('rememberId', String(checked));
+                                    if (checked) {
+                                        localStorage.setItem('rememberedUserId', user.userid || '');
+                                    } else {
+                                        localStorage.removeItem('rememberedUserId');
+                                    }
+                                }}
+                            />
+                            <label htmlFor="rememberId">아이디 저장</label>
                         </p>
 
                         <p>
@@ -132,7 +170,7 @@ const Login = () => {
                             </button>
                         </p>
                         <p>
-                            <button className="kakaoBtn" onClick={loginKakao}>
+                            <button className="kakaoBtn" type="button" onClick={loginKakao}>
                                 <img src="/images/login/kakaologin.png" alt="카카오아이콘" />{' '}
                                 카카오로 로그인
                             </button>
