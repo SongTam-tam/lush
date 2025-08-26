@@ -8,7 +8,8 @@ const CartItem = ({ cart }) => {
   return (
     <CartItemStyle as="tr" className="cart-item">
       {/* 상품 이미지 */}
-      <td>
+      <td className="item-image-cell">
+        <input type="checkbox" className="item-checkbox" />
         <img src={img} alt={title} className="item-image" />
       </td>
       {/* 상품명 */}

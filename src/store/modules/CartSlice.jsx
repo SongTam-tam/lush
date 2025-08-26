@@ -94,6 +94,9 @@ export const CartSlice = createSlice({
                 0
             );
         },
+        Compl: (state, action) => {
+            state.carts = [];
+        },
     },
 });
 

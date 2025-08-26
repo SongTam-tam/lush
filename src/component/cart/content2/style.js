@@ -27,16 +27,22 @@ export const CartBottomstyle = styled.div`
     font-weight: 600;
   }
 `;
-export const ButtonStyle = styled.button`
-  margin-top: 150px;
-  background: #000;
-  width: 320px;
-  height: 50px;
-  margin-left: auto;
+export const ButtonStyle = styled.div`
   a {
+    margin-top: 150px;
+    background: #000;
+    width: 320px;
+    height: 50px;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  span {
+    text-align: center;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
-    line-height: 50px;
+    display: inline-block;
   }
 `;

@@ -3,71 +3,18 @@ import { LoginStyle } from './style';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { authActions } from '../../store/modules/authSlice';
+// import Cookies from 'js-cookie';
 
+const KAKAO_JAVASCRIPT_KEY = import.meta.env.VITE_KAKAO_JS_KEY;
+const KAKAO_REDIRECT_URI = import.meta.env.VITE_KAKAO_REDIRECT_URI.replace(/\/$/, '');
 const Login = () => {
-    const REST_API_KEY = import.meta.env.VITE_KAKAO_REST_KEY;
-    const REDIRECT_URI = import.meta.env.VITE_KAKAO_REDIRECT_URI;
-
     // console.log(link);
 
-    const loginKakao = () => {
-        const link = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${encodeURIComponent(
-            REDIRECT_URI
-        )}&response_type=code`;
-        window.location.href = link;
-    };
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    console.log(REST_API_KEY, REDIRECT_URI);
-    useEffect(() => {
-        const code = new URL(window.location.href).searchParams.get('code');
-        if (!code) return;
-
-        const fetchToken = async () => {
-            try {
-                // 1️⃣ 토큰 요청
-                const tokenRes = await fetch('https://kauth.kakao.com/oauth/token', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
-                    },
-                    body: new URLSearchParams({
-                        grant_type: 'authorization_code',
-                        client_id: REST_API_KEY,
-                        redirect_uri: REDIRECT_URI,
-                        code,
-                    }),
-                });
-                console.log('Token 요청 redirect_uri:', REDIRECT_URI);
-                const tokenData = await tokenRes.json();
-                if (!tokenData.access_token) throw new Error('토큰 발급 실패');
-
-                localStorage.setItem('kakao_access_token', tokenData.access_token);
-
-                // 2️⃣ 사용자 정보 요청
-                const userRes = await fetch('https://kapi.kakao.com/v2/user/me', {
-                    method: 'GET',
-                    headers: {
-                        Authorization: `Bearer ${tokenData.access_token}`,
-                        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
-                    },
-                });
-
-                const userInfo = await userRes.json();
-                dispatch(authActions.loginKakao(userInfo));
-                navigate('/');
-            } catch (err) {
-                console.error('카카오 로그인 에러:', err);
-            }
-        };
-
-        fetchToken();
-    }, [dispatch, navigate, REST_API_KEY, REDIRECT_URI]);
 
     const [isHover, setIsHover] = useState(false);
-
     const [rememberId, setRememberId] = useState(false);
-
     const [user, setUser] = useState({
         userid: '',
         password: '',
@@ -112,7 +59,64 @@ const Login = () => {
         }
         setUser({ userid: rememberId ? userid : '', password: '' });
     };
+    // const clearKakaoSession = () => {
+    //     // 1. 모든 쿠키 삭제
+    //     Object.keys(Cookies.get()).forEach((cookieName) => {
+    //         Cookies.remove(cookieName);
+    //         Cookies.remove(cookieName, { path: '/' });
+    //     });
 
+    //     // 2. 로컬 스토리지에서 카카오 관련 항목 삭제
+    //     localStorage.removeItem('kakaoToken');
+    //     localStorage.removeItem('token');
+
+    //     // 3. 세션 스토리지 정리
+    //     sessionStorage.removeItem('authorize-access-token');
+    //     sessionStorage.removeItem('authorize-refresh-token');
+
+    //     // 4. Kakao SDK 초기화 (SDK가 로드된 경우)
+    //     if (window.Kakao && window.Kakao.Auth) {
+    //         try {
+    //             if (window.Kakao.Auth.getAccessToken()) {
+    //                 window.Kakao.Auth.logout(() => {
+    //                     console.log('카카오 SDK 로그아웃 완료');
+    //                 });
+    //             }
+    //         } catch (e) {
+    //             console.log('카카오 SDK 로그아웃 실패:', e);
+    //         }
+    //     }
+
+    //     console.log('카카오 세션 정리 완료');
+    // };
+    // const onKakaoLogin = (e) => {
+    //     e.preventDefault();
+    //     // 기존 세션 정리
+    //     // clearKakaoSession();
+
+    //     // 잠시 지연 후 카카오 로그인 페이지로 리다이렉트
+    //     setTimeout(() => {
+    //         // URL 인코딩   적용
+    //         const encodedRedirectUri = encodeURIComponent(KAKAO_REDIRECT_URI);
+
+    //         const kakaoAuthURL = `https://kauth.kakao.com/oauth/authorize?client_id=${KAKAO_JAVASCRIPT_KEY}&redirect_uri=${KAKAO_REDIRECT_URI}&response_type=code`;
+
+    //         console.log('kakaoAuthURL: ', kakaoAuthURL);
+    //         console.log('KAKAO_REDIRECT_URI: ', KAKAO_REDIRECT_URI);
+    //         console.log('인코딩된 URI: ', encodedRedirectUri);
+
+    //         window.location.href = kakaoAuthURL;
+    //     }, 500);
+    // };
+    const onKakaoLogin = (e) => {
+        e.preventDefault();
+
+        const kakaoAuthURL = `https://kauth.kakao.com/oauth/authorize?client_id=${KAKAO_JAVASCRIPT_KEY}&redirect_uri=${KAKAO_REDIRECT_URI}&response_type=code`;
+
+        console.log('kakaoAuthURL: ', kakaoAuthURL);
+
+        window.location.href = kakaoAuthURL;
+    };
     return (
         <LoginStyle>
             <div className="inner">
@@ -170,7 +174,7 @@ const Login = () => {
                             </button>
                         </p>
                         <p>
-                            <button className="kakaoBtn" type="button" onClick={loginKakao}>
+                            <button className="kakaoBtn" type="button" onClick={onKakaoLogin}>
                                 <img src="/images/login/kakaologin.png" alt="카카오아이콘" />{' '}
                                 카카오로 로그인
                             </button>

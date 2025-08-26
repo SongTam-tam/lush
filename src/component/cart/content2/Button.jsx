@@ -4,7 +4,9 @@ import { ButtonStyle } from "./style";
 const Button = () => {
   return (
     <ButtonStyle>
-      <Link>결제하기</Link>
+      <Link to="/pay">
+        <span>결제하기</span>
+      </Link>
     </ButtonStyle>
   );
 };
