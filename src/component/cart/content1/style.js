@@ -41,6 +41,17 @@ export const CartItemStyle = styled.tr`
     text-align: center;
     vertical-align: middle;
   }
+  .item-image-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .item-checkbox {
+    margin-right: 16px;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+  }
   /* border: 1px solid #000; */
   .item-image {
     width: 200px;

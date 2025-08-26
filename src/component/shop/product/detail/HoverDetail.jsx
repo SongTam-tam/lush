@@ -9,7 +9,13 @@ import { useDispatch, useSelector } from "react-redux";
 const HoverDetail = ({ id, title, price2, img, chk }) => {
   const dispatch = useDispatch();
   const { updateChk, addCart } = useSelector((state) => state.cart);
+  const handleToggleHeart = () => {
+    dispatch(cartActions.updateChk(id));
+  };
 
+  const handleAddCart = () => {
+    dispatch(cartActions.addCart(product));
+  };
   return (
     <HoverDetailStyle>
       <Link to={`/shop/shopDetail/${id}`} className="product_img">
@@ -23,14 +29,14 @@ const HoverDetail = ({ id, title, price2, img, chk }) => {
         <div className="icon-box">
           <i
             className="CiHeart"
-            onClick={() => dispatch(updateChk(id))}
+            onClick={handleToggleHeart}
             style={{ cursor: "pointer" }}
           >
             {chk ? <FaHeart size={24} color="red" /> : <CiHeart size={24} />}
           </i>
           <i
             onClick={() => {
-              dispatch(cartActions.addCart(product));
+              handleAddCart;
             }}
             style={{ cursor: "pointer" }}
           >

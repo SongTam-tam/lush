@@ -1,10 +1,11 @@
+// Shopheader.tsx
 import { Shopheaderstyled } from "./style";
 
-const Shopheader = ({ selected, onSelect }) => {
+const Shopheader = ({ selected, onSelect, className }) => {
   const menuData = ["bath", "shower", "face", "body", "hair", "fragrance"];
 
   return (
-    <Shopheaderstyled className="subheader">
+    <Shopheaderstyled className={`subheader ${className ?? ""}`}>
       <ul>
         {menuData.map((key) => (
           <li
