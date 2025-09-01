@@ -14,6 +14,8 @@ const initialState = {
         : [],
     paymentTotal: 0,
     paymentPriceTotal: 0,
+    totalPrice: 0,
+    deliveryFee: 3000,
 };
 
 export const CartSlice = createSlice({
@@ -55,6 +57,12 @@ export const CartSlice = createSlice({
             state.quantityTotal = state.carts.reduce((sum, item) => sum + item.quantity, 0);
         },
 
+        cartTotal: (state) => {
+            state.deliveryFee = state.priceTotal > 50000 ? 0 : 3000;
+            state.totalPrice = state.priceTotal + state.deliveryFee;
+            localStorage.setItem('carts', JSON.stringify(state.carts));
+        },
+
         increaseQuantity: (state, action) => {
             const id = action.payload;
             const item = state.carts.find((cart) => cart.id === id);
@@ -62,6 +70,12 @@ export const CartSlice = createSlice({
                 item.quantity++;
                 item.itemtotal = item.price * item.quantity;
             }
+
+            // 👉 수량 변경 후 바로 재계산
+            state.priceTotal = state.carts.reduce((sum, i) => sum + i.price * i.quantity, 0);
+            state.deliveryFee = state.priceTotal > 50000 ? 0 : 3000;
+            state.totalPrice = state.priceTotal + state.deliveryFee;
+
             localStorage.setItem('carts', JSON.stringify(state.carts));
         },
 
@@ -76,9 +90,16 @@ export const CartSlice = createSlice({
                 } else {
                     item.itemtotal = item.price * item.quantity;
                 }
-                localStorage.setItem('carts', JSON.stringify(state.carts));
             }
+
+            // 👉 수량 변경 후 바로 재계산
+            state.priceTotal = state.carts.reduce((sum, i) => sum + i.price * i.quantity, 0);
+            state.deliveryFee = state.priceTotal > 50000 ? 0 : 3000;
+            state.totalPrice = state.priceTotal + state.deliveryFee;
+
+            localStorage.setItem('carts', JSON.stringify(state.carts));
         },
+
         updateChk: (state, action) => {
             const id = action.payload;
             const item = state.items.find((it) => it.id === id);
@@ -86,13 +107,19 @@ export const CartSlice = createSlice({
                 item.chk = !item.chk;
             }
         },
-        payment: (state, action) => {
+
+        payment: (state) => {
             state.paymentCart = state.carts.filter((item) => item.isChk === true);
             state.paymentTotal = state.paymentCart.reduce((sum, item) => sum + item.quantity, 0);
             state.paymentPriceTotal = state.paymentCart.reduce(
                 (sum, item) => sum + item.price * item.quantity,
                 0
             );
+        },
+
+        Compl: (state) => {
+            state.carts = [];
+            localStorage.setItem('carts', JSON.stringify(state.carts));
         },
     },
 });

@@ -16,3 +16,5 @@ export { default as Join } from './join';
 export { default as MyPage } from './mypage';
 export { default as Cart } from './cart';
 export { default as Search } from './search';
+export { default as Pay } from './pay';
+export { default as PayComplete } from './payComplete';

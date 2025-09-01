@@ -75,6 +75,7 @@ export const ReviewRightStyle = styled.div`
     font-size: 15px;
     font-weight: 400;
     position: relative;
+    cursor: pointer;
 
     margin-bottom: 131px;
     &::after {

@@ -13,7 +13,7 @@ export const LoginStyle = styled.div`
         position: relative;
         width: 945px;
         h2 {
-            font-family: 'Lush Handwritten WLat', bold;
+            font-family: 'Lush Handwritten WLat Bold', sans-serif;
             font-size: 100px;
             color: #353535;
             margin-left: 350px;

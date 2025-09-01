@@ -12,22 +12,6 @@ const Wonder = () => {
     useGSAP(
         () => {
             gsap.fromTo(
-                titleRef1.current,
-                {
-                    x: '70%',
-                },
-                {
-                    x: '-70%',
-                    scrollTrigger: {
-                        trigger: '.contentWonder',
-                        start: '+=10000',
-                        end: 'bottom bottom',
-                        scrub: 1,
-                        // markers: true,
-                    },
-                }
-            );
-            gsap.fromTo(
                 titleRef2.current,
                 {
                     x: '-80%',
@@ -45,8 +29,31 @@ const Wonder = () => {
             );
         },
         {
-            // scope: titleRef1,
-            // scope: titleRef2,
+            scope: titleRef2,
+        }
+    );
+
+    useGSAP(
+        () => {
+            gsap.fromTo(
+                titleRef1.current,
+                {
+                    x: '70%',
+                },
+                {
+                    x: '-70%',
+                    scrollTrigger: {
+                        trigger: '.contentWonder',
+                        start: '+=10000',
+                        end: 'bottom bottom',
+                        scrub: 1,
+                        // markers: true,
+                    },
+                }
+            );
+        },
+        {
+            scope: titleRef1,
         }
     );
     return (

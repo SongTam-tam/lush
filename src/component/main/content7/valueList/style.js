@@ -4,6 +4,21 @@ export const ValueListStyle = styled.div`
     width: 100%;
     position: relative;
     display: flex;
+    .btn {
+        position: absolute;
+        top: 703px;
+        left: 1771px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        cursor: pointer;
+        button {
+            background-color: transparent;
+            font-size: 18px;
+            color: #fff;
+        }
+    }
     li {
         position: relative;
         width: 100%;
@@ -59,6 +74,13 @@ export const ValueListStyle = styled.div`
                 font-size: 16px;
                 font-weight: 500;
                 position: relative;
+                cursor: pointer;
+                &:hover {
+                    color: #b6d72a;
+                    &::after {
+                        background-color: #b6d72a;
+                    }
+                }
                 &::after {
                     content: '';
                     background-color: #fff;

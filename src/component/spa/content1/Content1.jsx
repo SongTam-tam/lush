@@ -1,6 +1,5 @@
 import React from 'react';
 import { SpaContent1Style } from './style';
-
 const Content1 = () => {
     return (
         <SpaContent1Style>
@@ -40,13 +39,13 @@ const Content1 = () => {
             </div>
             <div className="imgBox">
                 <div className="pp left">
-                    <img src="./images/spa/button1.jpg" alt="" />
+                    <img src="./images/spa/button1.png" alt="" />
                     <p>{`나에게 맞는
 스파 트리트먼트`}</p>
                     <span>찾기</span>
                 </div>
                 <div className="pp right">
-                    <img src="./images/spa/button2.jpg" alt="" />
+                    <img src="./images/spa/button2.png" alt="" />
                     <p>{`나에게 맞는
 스파 트리트먼트`}</p>
                     <span>조합하기</span>

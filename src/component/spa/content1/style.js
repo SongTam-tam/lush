@@ -11,12 +11,18 @@ export const SpaContent1Style = styled.section`
         align-items: center;
         gap: 140px;
         margin-bottom: 145px;
+        border-bottom: 0.8px solid var(--GrayScale-4, #cacaca);
         .reservation {
+            cursor: pointer;
             font-size: 20px;
             font-weight: 600;
             line-height: normal;
+            cursor: pointer;
             color: #353535;
             &.on {
+                color: #b6d72a;
+            }
+            &:hover {
                 color: #b6d72a;
             }
         }
@@ -25,7 +31,11 @@ export const SpaContent1Style = styled.section`
             font-weight: 600;
             line-height: normal;
             color: #353535;
+            cursor: pointer;
             &.on {
+                color: #b6d72a;
+            }
+            &:hover {
                 color: #b6d72a;
             }
         }
@@ -62,11 +72,19 @@ export const SpaContent1Style = styled.section`
             box-sizing: border-box;
             width: 480px;
             height: 366px;
+            overflow: hidden;
             position: relative;
             cursor: pointer;
             border-radius: 0%;
+
+            &:hover {
+                img {
+                    transform: scale(1.2);
+                }
+            }
             img {
                 position: absolute;
+                transition: 0.5s;
                 left: 0;
                 top: 0;
                 z-index: -1;

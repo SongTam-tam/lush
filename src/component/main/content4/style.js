@@ -19,6 +19,7 @@ export const ProductStyle = styled.section`
         right: 160px;
         display: flex;
         align-items: center;
+
         button {
             width: 58px;
             height: 24px;
@@ -37,6 +38,10 @@ export const ProductStyle = styled.section`
             justify-content: center;
             align-items: start;
             margin-left: 42px;
+            &:hover {
+                color: #b6d72a;
+                border-color: #b6d72a;
+            }
         }
     }
 `;

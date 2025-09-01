@@ -1,7 +1,12 @@
 import React from 'react';
 import { CiHeart } from 'react-icons/ci';
 import { IoMdAdd } from 'react-icons/io';
+import { useDispatch } from 'react-redux';
+import { cartActions } from '../../../store/modules/CartSlice';
+import { useNavigate } from 'react-router-dom';
 const SearchItem = ({ search }) => {
+    const dispatch = useDispatch();
+    const nav = useNavigate();
     const {
         id,
         title,
@@ -17,7 +22,7 @@ const SearchItem = ({ search }) => {
         desc,
     } = search;
     return (
-        <li>
+        <li onClick={() => nav(`/shop/shopDetail/${id}`)}>
             <div className="pic">
                 <img src={img} alt="" />
             </div>
@@ -27,7 +32,7 @@ const SearchItem = ({ search }) => {
                 <i>
                     <CiHeart />
                 </i>
-                <i>
+                <i onClick={() => dispatch(cartActions.addCart(id))}>
                     <IoMdAdd />
                 </i>
             </p>

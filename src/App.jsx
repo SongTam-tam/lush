@@ -20,9 +20,12 @@ import {
     Logout,
     Search,
     MyPage,
+    Pay,
+    PayComplete,
 } from './page';
 import NotFile from './page/notFile';
 import PageTop from './ui/PageTop';
+import Oauth from './page/oauth';
 
 const App = () => {
     return (
@@ -34,8 +37,6 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Main />} />
-                        <Route path=":bestDetail" element={<BestDetail />} />
-                        <Route path=":newDetail" element={<NewDetail />} />
                         <Route path="hara" element={<Hara />} />
                         <Route path="faq" element={<FAQ />} />
                         <Route path="event" element={<Event />} />
@@ -43,16 +44,21 @@ const App = () => {
                         <Route path="store" element={<Store />} />
                         <Route path="about" element={<About />} />
                         <Route path="login" element={<Login />} />
+                        <Route path="oauth" element={<Oauth />} />
                         <Route path="logout" element={<Logout />} />
                         <Route path="join" element={<Join />} />
                         <Route path="mypage" element={<MyPage />} />
                         <Route path="cart" element={<Cart />} />
+                        <Route path="pay" element={<Pay />} />
+                        <Route path="payComplete" element={<PayComplete />} />
+                        <Route path="newDetail/:id" element={<NewDetail />} />
                         <Route path="search">
                             <Route index element={<Search />} />
                         </Route>
                         <Route path="shop">
                             <Route index element={<Shop />} />
                             <Route path="shopDetail/:id" element={<ShopDetail />} />
+                            <Route path="bestDetail/:id" element={<BestDetail />} />
                         </Route>
                     </Route>
                     <Route path="*" element={<NotFile />} />

@@ -16,13 +16,13 @@ const BestDetail = ({
 }) => {
   return (
     <li className="best5list">
-      <Link to="/shop/shopDetail" className="slideimg">
+      <Link to={`/shop/bestDetail/${id}`} className="slideimg">
         <img src={img} alt={title} />
       </Link>
-      <Link to="/shop/shopDetail">
+      <Link to={`/shop/bestDetail/${id}`}>
         <h3>{title}</h3>
       </Link>
-      <Link to="/shop/shopDetail">
+      <Link to={`/shop/bestDetail/${id}`}>
         <h4>₩ {price2} </h4>
       </Link>
     </li>

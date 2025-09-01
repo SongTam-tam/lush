@@ -22,7 +22,7 @@ const Logout = () => {
                     <>
                         <img src="/images/login/bg.png" alt="러쉬 제품 이미지" />
                         <h3>
-                            <span>{user?.name ?? '고객'}</span>님<br />
+                            <span> {user.isKakaoUser ? user.username : user.name}</span>님<br />
                             이용해주셔서 감사합니다.
                         </h3>
 

@@ -77,6 +77,12 @@ const SpaVisual = () => {
                 />
                 <div className="selectPosition">
                     <div className="custom-select" ref={dropdownRef}>
+                        <div className="ppp">
+                            <img
+                                src={isOpen ? 'images/spa/Vector_2.png' : 'images/spa/Vector_1.png'}
+                                alt=""
+                            />
+                        </div>
                         <div className="selected" onClick={() => setIsOpen(!isOpen)}>
                             <p>Adult</p>
                             {selected.label}
@@ -100,6 +106,12 @@ const SpaVisual = () => {
                     </div>
                 </div>
                 <div className="selectPosition2">
+                    <div className="ppp">
+                        <img
+                            src={isOpen2 ? 'images/spa/Vector_2.png' : 'images/spa/Vector_1.png'}
+                            alt=""
+                        />
+                    </div>
                     <div className="custom-select" ref={dropdownRef2}>
                         <div className="selected" onClick={() => setIsOpen2(!isOpen2)}>
                             <p>Chlidren</p>
@@ -124,6 +136,12 @@ const SpaVisual = () => {
                     </div>
                 </div>
                 <div className="timePosition">
+                    <div className="ppp">
+                        <img
+                            src={isOpenTime ? 'images/spa/Vector_2.png' : 'images/spa/Vector_1.png'}
+                            alt=""
+                        />
+                    </div>
                     <div className="custom-select" ref={dropdownRef3}>
                         <div className="selected" onClick={() => setIsOpenTime(!isOpenTime)}>
                             <p>Time</p>

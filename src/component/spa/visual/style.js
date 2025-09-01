@@ -17,6 +17,17 @@ export const SpaVisualStyle = styled.section`
         color: #fff;
         font-family: 'Lush Handwritten WLat Bold', sans-serif;
     }
+    .ppp {
+        position: absolute;
+        left: 219px;
+        top: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 18px;
+        }
+    }
     .spa-store {
         position: absolute;
         z-index: 100;
@@ -43,6 +54,8 @@ export const SpaVisualStyle = styled.section`
             top: 53px;
             left: 464px;
             pointer-events: none;
+            z-index: 100;
+
             i {
                 display: block;
                 width: 38px;

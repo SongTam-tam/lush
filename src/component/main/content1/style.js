@@ -59,6 +59,10 @@ export const BestSellerStyle = styled.section`
             justify-content: center;
             align-items: start;
             margin-left: 42px;
+            &:hover {
+                color: #b6d72a;
+                border-color: #b6d72a;
+            }
         }
     }
 `;

@@ -20,7 +20,7 @@ const MypageProfile = () => {
             </div>
             <div className="profile_name">
                 {/* <p>{user.name} 님</p> */}
-                <p>{user.name} 님</p>
+                <p> {user.isKakaoUser ? user.username : user.name}님</p>
                 <span>회원정보변경</span>
             </div>
             <div className="service">

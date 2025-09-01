@@ -64,6 +64,7 @@ export const SearchListStyle = styled.ul`
             display: none;
             position: absolute;
             bottom: -10px;
+            z-index: 30;
             left: 0;
             i {
                 font-size: 20px;

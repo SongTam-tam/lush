@@ -112,5 +112,8 @@ export const BarStyle = styled.ul`
         &.on {
             color: #b6d72a;
         }
+        &:hover {
+            color: #b6d72a;
+        }
     }
 `;

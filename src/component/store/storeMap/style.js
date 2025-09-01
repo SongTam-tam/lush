@@ -26,6 +26,9 @@ export const APIMapStyle = styled.div`
                 &.on {
                     color: #b6d72a;
                 }
+                &:hover {
+                    color: #b6d72a;
+                }
             }
         }
     }
@@ -165,8 +168,9 @@ export const APIMapStyle = styled.div`
                     font-weight: 500;
                     line-height: normal;
                     color: var(--GrayScale-3, #aaa);
+                    cursor: pointer;
                     &:hover {
-                        color: #000;
+                        color: #b6d72a;
                     }
                 }
             }

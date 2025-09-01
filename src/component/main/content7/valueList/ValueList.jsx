@@ -10,7 +10,8 @@ import { useSelector } from 'react-redux';
 import ValueItem from './ValueItem';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-
+import { IoPause } from 'react-icons/io5';
+import { HiMiniPlay } from 'react-icons/hi2';
 const ValueList = () => {
     const progressCircle = useRef(null);
     const progressContent = useRef(null);
@@ -21,8 +22,10 @@ const ValueList = () => {
     const miniTextRef = useRef();
     const detailRef = useRef();
     const colorRef = useRef();
+    const [isPlay, setIsPlay] = useState(false);
     colorRef.current = [];
 
+    const gaugeTween = useRef();
     const { value } = useSelector((state) => state.value);
     useEffect(() => {
         if (!swiperRef.current) return;
@@ -140,7 +143,17 @@ const ValueList = () => {
             swiper.off('slideChangeTransitionStart', animateSlide);
         };
     }, []);
-
+    const onPlay = () => {
+        if (!isPlay) {
+            swiperRef.current.autoplay.stop();
+            gaugeTween.current?.pause();
+            setIsPlay(true);
+        } else {
+            swiperRef.current.autoplay.start();
+            gaugeTween.current?.resume();
+            setIsPlay(false);
+        }
+    };
     return (
         <ValueListStyle>
             <Swiper
@@ -158,7 +171,7 @@ const ValueList = () => {
                     el: pageRef.current,
                     renderBullet: (index, className) => {
                         return `<span class="${className}">
-              <span class="pagenation-gage"></span>
+              <span class="pagenation-gage" ref=${gaugeTween}></span>
             </span>`;
                     },
                 }}
@@ -200,6 +213,9 @@ const ValueList = () => {
                     ))}
                 </ul>
             </Swiper>
+            {/* <p className="btn" onClick={onPlay}>
+                <button className="pause">{isPlay ? <HiMiniPlay /> : <IoPause />}</button>
+            </p> */}
         </ValueListStyle>
     );
 };

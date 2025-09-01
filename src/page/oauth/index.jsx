@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { OauthStyle } from './style';
+
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getKakaoLogin } from '../../store/modules/getThunk'; // ✅ 이 줄 추가
+import { OuathStyle } from './style';
 
 const Oauth = () => {
     const [searchParams] = useSearchParams();
@@ -20,11 +21,11 @@ const Oauth = () => {
     }, [code, dispatch, navigate]);
 
     return (
-        <OauthStyle>
+        <OuathStyle>
             <div className="inner">
                 <h2>로그인 성공</h2>
             </div>
-        </OauthStyle>
+        </OuathStyle>
     );
 };
 

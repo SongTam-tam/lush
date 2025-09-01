@@ -114,6 +114,7 @@ export const MapStyle = styled.div`
             align-items: center;
             display: flex;
             flex-direction: column;
+            cursor: pointer;
             width: 183px;
             span {
                 border-radius: 100%;

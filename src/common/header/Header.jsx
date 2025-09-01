@@ -38,6 +38,7 @@ const Header = () => {
             );
         }
     }, [location.pathname]);
+    // const isKakaoUser = user && user.isKakaoUser;
     return (
         <HeaderStyle className="header">
             {inpOn ? (
@@ -59,7 +60,9 @@ const Header = () => {
             <Nav />
             <div className="userIcon">
                 {authed && (
-                    <span className="user">{user?.name ?? '고객'}님, 당신의 순간을 응원해요!</span>
+                    <span className="user">
+                        {user.isKakaoUser ? user.username : user.name}님, 당신의 순간을 응원해요!
+                    </span>
                 )}
 
                 <ul className="lcons">
