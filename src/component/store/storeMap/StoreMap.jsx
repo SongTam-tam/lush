@@ -8,6 +8,7 @@ const StoreMap = () => {
     const mapRef = useRef([]);
     const [reg, setReg] = useState(regionData);
     const [mapL, setMapL] = useState(null);
+
     useEffect(() => {
         const container = document.getElementById('map');
         const options = {
